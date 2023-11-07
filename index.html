@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="index.css">
+</head>
+<body>
+   <div class="car">
+   <div class="body-car">
+      <div class="michlan"><div class="roll"></div></div>
+      <div class="michlan1"><div class="roll"></div></div>
+   </div>
+   <div class="body-car1"></div>
+   <div class="body-car2"></div>
+   <div class="door">
+      <div class="mi">
+         <div class="miror"></div>
+      </div>
+
+   </div>
+   <div class="door1 door">
+      <div class="mi1">
+         <div class="miror1"></div>
+      </div>
+
+   </div>
+
+   </div>
+   <script>
+      let dor = document.querySelectorAll(".door");
+      dor.forEach((e) => {
+        e.addEventListener("click", (e) => {
+          e.target.classList.toggle("active");
+          console.log(e.target)
+        });
+      });
+      let st = document.querySelector(".car");
+      
+        st.addEventListener("click", (e) => {
+          e.target.classList.toggle("st");
+          console.log(e.target)
+        });
+      
+   </script>
+  
+</body>
+</html>

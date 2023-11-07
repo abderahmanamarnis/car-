@@ -1,0 +1,196 @@
+* {
+   margin: 0;
+   box-sizing: border-box;
+
+}
+
+body {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   overflow: hidden;
+}
+
+.car {
+   position: absolute;
+   bottom: 20px;
+  right: 0;
+   width: 600px;
+   height: 300px;
+   border: 1px solid black;
+  
+}
+
+.body-car {
+   position: absolute;
+   top: 105px;
+   left: 50%;
+   transform: translate(-50%);
+   width: 75%;
+   height: 45%;
+   border: 2px solid black;
+   border-radius: 30% 0 0 10%;
+   background: rgb(137, 136, 136);
+}
+
+.michlan {
+   position: absolute;
+   top: 50%;
+   border: solid;
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   background-color: black;
+}
+
+.michlan1 {
+   position: absolute;
+   top: 50%;
+   right: 0;
+   border: solid;
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   background-color: black;
+}
+
+.body-car2 {
+   position: absolute;
+   top: 32px;
+   left: 36%;
+   transform: translate(-50%);
+   background: white;
+   width: 20%;
+   height: 25%;
+   border: 2px solid black;
+   border-bottom: none;
+   border-right: none;
+   transform: skewX(-30deg);
+   background: gray;
+
+}
+
+.body-car1 {
+   position: absolute;
+   top: 32px;
+   left: 67.5%;
+   transform: translate(-50%);
+   background: white;
+   width: 40%;
+   height: 25%;
+   border: 2px solid black;
+   border-bottom: none;
+   background: gray;
+
+}
+
+.door {
+   position: absolute;
+   top: 35px;
+   left: 34%;
+   width: 20%;
+   height: 65%;
+
+}
+
+.mi {
+   position: absolute;
+   top: 7px;
+   left: 5px;
+   width: 95%;
+   height: 90%;
+   border: 2px solid black;
+   border-radius: 70% 10% 30% 20%;
+   background-color: rgb(47, 44, 44);
+   transition: 1s; 
+   transform-origin: 0 0;
+}
+
+.miror {
+   position: absolute;
+   left: 24px;
+   top: 5px;
+   background-color: rgb(31, 73, 73);
+   width: 75%;
+   height: 35%;
+   border: 1PX solid black;
+   border-radius: 80% 10% 10% 0;
+}
+
+.door1 {
+   position: absolute;
+   top: 35px;
+   left: 54%;
+   width: 20%;
+   height: 65%;
+
+}
+
+.mi1 {
+   position: absolute;
+   top: 7px;
+   left: 5px;
+   width: 95%;
+   height: 90%;
+   border: 2px solid black;
+   background-color: rgb(47, 44, 44);
+   border-radius: 10% 10% 40% 20%;
+   transition: 1s; 
+   transform-origin: 0 0;
+}
+
+.miror1 {
+   position: absolute;
+   left: 5px;
+   top: 5px;
+   background-color: rgb(31, 73, 73);
+   width: 90%;
+   height: 35%;
+   border: 1PX solid black;
+   border-radius: 10% 10% 10% 10%;
+}
+
+.roll {
+   position: absolute;
+   width: 90%;
+   height: 90%;
+   border-radius: 50%;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: white;
+   background-image: repeating-conic-gradient(black 10%, white 30%);
+}
+
+
+.mi.active,
+.mi1.active {
+   transform: rotateY(120deg);
+   z-index: 5;
+}
+.car.st {
+   animation:move 4s infinite linear;
+}
+
+.car.st .roll {
+   animation:ff 1s linear infinite ;
+
+}
+@keyframes move {
+   0% {right: -50%;}
+   100% {right: 120%;}
+   
+  
+}
+@keyframes ff{
+   0% {transform: rotateZ(0deg);
+      top: 5%;
+      left: 5%;
+   
+   }
+   100% {transform: rotateZ(-360deg);
+      top: 5%;
+      left: 5%;
+   }
+   
+} 
